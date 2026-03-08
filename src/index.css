@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+:root{
+    font-family: "Cairo", sans-serif;
+}
+.form-control{
+    background-color: var(--color-gray-100);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 3);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: .2s;
+    transition-duration: .2s;
+}
+.form-control:focus{
+
+    border: 1px solid var(--color-blue-600);
+}
+.form-control:focus-within{
+outline: 1px solid var(--color-blue-600);
+}
+.sign-up{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(20, 71, 230, 0.5), rgba(20, 71, 230, 0.5)),url(./assets/Images/signup-bg-DGRfriy9.jpeg);
+    
+}
+.active{
+   background-color:#e7f3ff ;
+   color: #1877f2;
+}
